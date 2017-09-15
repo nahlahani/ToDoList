@@ -1,0 +1,84 @@
+.container {
+    margin-top: 20px;
+}
+h1 {
+    font-size: 60px;
+    color: #350404;
+}
+#addtask {
+    text-align:center;
+    display:block;
+    margin:0 auto;
+}
+input {
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    height: 50px;
+    border: none;
+    box-shadow: 1px 1px 3px 3px #350404;
+}
+
+ul {
+    margin-top: 10px;
+    list-style: none;
+}
+li {
+    margin-bottom: 5px;
+    height: 40px;
+    list-style-position:inside;
+    box-shadow: 1px 1px 1px 1px #350404;
+}
+
+#todolist {
+    display:block;
+    margin: 10px auto; 
+  
+}
+label {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    
+  }
+  #checkbox {
+    width: 20px;
+    height: 20px;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+
+  }
+  span {
+    font-size: 20px;
+      margin-left: 20px;
+  }
+
+  input[type=checkbox]:checked + span.strikethrough{
+    text-decoration: line-through;
+  }
+  .delete-icon {
+      float: right;
+      margin-right: 20px;
+      font-size: 23px;
+      cursor: pointer;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: bold; 
+    color:#350404;
+  }
+
+  #moreInfo {
+      display: inline-flex;
+   }
+   button {
+       border: none;
+       cursor: pointer;
+       box-shadow: 1px 1px 1px 1px #350404;
+      background-color: #260003;
+      color: #FFFFFF;
+   }

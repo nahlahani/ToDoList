@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center">
+        <h1 >ToDo List</h1>
+
+        <form ngNativeValidate class="form-inline text-center col-md-6" id="addtask" (submit)="addTodo()"  >
+        <input type="text" 
+               class="row" 
+               [(ngModel)]="newTodo" 
+               name="newTodo" 
+               placeholder="Add Your Task..." 
+               required>
+        </form> 
+       
+        <ul class="tasks col-md-5 " id="todolist">
+            <li *ngFor="let todo of todos; let i=index" >
+                <label> 
+                  <input type="checkbox" id="checkbox" [(ngModel)]="todo.done"(click)="checkdone($event,i)"  />  
+                  <span class="strikethrough">{{ todo.newTodo }}</span>  
+                </label>
+                <span>{{todo_done}}</span>
+                <span (click)="deleteTodo(i)" class="delete-icon">x</span>
+            </li>
+        </ul>
+          <div class="col-md-6" id="moreInfo">
+              <button class="col-md-4" (click)="clearAll()"> Clear All </button>
+               <p class="col-md-3"> {{remains()}} Item(s) Left </p>
+              <button class="col-md-4" (click)="clearCompleted()"> Clear completed </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
